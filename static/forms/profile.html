@@ -1,0 +1,28 @@
+<section class="card">
+  <h2>Мой оклад</h2>
+  <div class="stats">
+    <div class="stat"><div class="label">Сотрудник</div><div class="value" data-name></div></div>
+    <div class="stat"><div class="label">Оклад в месяц</div><div class="value" data-salary></div></div>
+  </div>
+</section>
+
+<section class="card">
+  <h2>Расчёт за месяц</h2>
+  <form id="period-form" class="inline">
+    <label>Месяц <select name="month"></select></label>
+    <label>Год <input name="year" type="number" min="2000" max="2100" required></label>
+    <button type="submit">Рассчитать</button>
+  </form>
+  <div class="stats" data-payslip style="margin-top:16px"></div>
+  <p class="hint">Дневная ставка = оклад / рабочие дни месяца (пн–пт). Рабочие дни на подтверждённом больничном оплачиваются в размере 50 %.</p>
+</section>
+
+<section class="card">
+  <h2>Премии и надбавки</h2>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Период</th><th>Тип</th><th class="num">Сумма</th><th>Комментарий</th></tr></thead>
+      <tbody data-bonuses></tbody>
+    </table>
+  </div>
+</section>

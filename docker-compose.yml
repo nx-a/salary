@@ -1,0 +1,20 @@
+# Отдельный PostgreSQL для сервиса (порт 5433, чтобы не конфликтовать с локальным 5432).
+# При использовании укажите в .env: DATABASE_URL=postgresql+psycopg://postgres:postgres@localhost:5433/salary
+services:
+  postgres:
+    image: postgres:18-alpine
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: salary
+    ports:
+      - "5433:5432"
+    volumes:
+      - salary-pg:/var/lib/postgresql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 3s
+      retries: 10
+
+volumes:
+  salary-pg:

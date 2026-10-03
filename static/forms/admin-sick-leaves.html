@@ -1,0 +1,19 @@
+<section class="card">
+  <h2>Больничные сотрудников</h2>
+  <form id="filter-form" class="inline" style="margin-bottom:12px">
+    <label>Статус
+      <select name="status">
+        <option value="">все</option>
+        <option value="pending" selected>на проверке</option>
+        <option value="approved">подтверждённые</option>
+        <option value="rejected">отклонённые</option>
+      </select>
+    </label>
+  </form>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Сотрудник</th><th>Период</th><th>Комментарий</th><th>Статус</th><th>Действия</th></tr></thead>
+      <tbody data-leaves></tbody>
+    </table>
+  </div>
+</section>

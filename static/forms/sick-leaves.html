@@ -1,0 +1,20 @@
+<section class="card">
+  <h2>Новый больничный</h2>
+  <form id="sick-form" class="inline">
+    <label>С <input name="date_from" type="date" required></label>
+    <label>По <input name="date_to" type="date" required></label>
+    <label style="flex:1;min-width:200px">Комментарий <input name="comment" maxlength="1000" placeholder="Номер листка нетрудоспособности"></label>
+    <button class="primary" type="submit">Отправить</button>
+  </form>
+  <p class="hint">Больничный учитывается в расчёте (50 % дневной ставки) после подтверждения администратором.</p>
+</section>
+
+<section class="card">
+  <h2>Мои больничные</h2>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Период</th><th>Комментарий</th><th>Статус</th></tr></thead>
+      <tbody data-leaves></tbody>
+    </table>
+  </div>
+</section>

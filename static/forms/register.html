@@ -1,0 +1,13 @@
+<section class="card narrow">
+  <h2>Регистрация сотрудника</h2>
+  <form id="register-form" class="stack">
+    <label>ФИО <input name="full_name" maxlength="255" required></label>
+    <label>Логин <input name="login" maxlength="64" autocomplete="username" required></label>
+    <label>Пароль <input name="password" type="password" minlength="6" autocomplete="new-password" required></label>
+    <label>Повторите пароль <input name="password2" type="password" minlength="6" autocomplete="new-password" required></label>
+    <p class="error" data-error></p>
+    <button class="primary" type="submit">Зарегистрироваться</button>
+  </form>
+  <p class="hint">После регистрации учётную запись должен подтвердить администратор.</p>
+  <p class="hint"><a href="#/login">Уже есть учётная запись</a></p>
+</section>
